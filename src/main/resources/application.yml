@@ -19,7 +19,7 @@ server:
 securetrans:
   cors:
     # Liste separee par des virgules. En prod, remplacer par le(s) domaine(s) reel(s) du frontend.
-    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:4173, https:securetrans.vercel.app}
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:4173,https:securetrans.vercel.app,https://securetrans.onrender.com}
   jwt:
     secret: ${JWT_SECRET:change-this-secret-in-production-min-32-chars}
     expiration-ms: 3600000
