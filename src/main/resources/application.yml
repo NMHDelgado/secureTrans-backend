@@ -2,7 +2,7 @@ spring:
   application:
     name: securetrans-backend
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/securetrans }
+    url: ${DB_URL}  # :jdbc:postgresql://localhost:5432/securetrans
     username: ${DB_USER:postgres}
     password: ${DB_PASSWORD:delgado}
   jpa:
