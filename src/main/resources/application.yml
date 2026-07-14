@@ -23,6 +23,12 @@ securetrans:
   jwt:
     secret: ${JWT_SECRET:change-this-secret-in-production-min-32-chars}
     expiration-ms: 3600000
+  admin:
+    # Compte administrateur provisionne automatiquement au demarrage (SeederController).
+    # En production, TOUJOURS surcharger ADMIN_EMAIL / ADMIN_PASSWORD par variables d'environnement.
+    email: ${ADMIN_EMAIL:admin@securetrans.com}
+    password: ${ADMIN_PASSWORD:ChangeMe123!}
+    full-name: ${ADMIN_FULL_NAME:Administrateur SecureTrans}
   fraud-engine:
     base-url: ${FRAUD_ENGINE_URL:http://localhost:8500}
     predict-path: /predict
